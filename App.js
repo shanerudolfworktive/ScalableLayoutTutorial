@@ -4,7 +4,7 @@ import {CircleImage} from "./CircleImage";
 
 const description = "this is description, very long text, jenna has been the number one support, and has been really great for fun to play as a champion, blah blah blah blab blah blah";
 const championSource= "https://raw.githubusercontent.com/shanerudolfworktive/ScalableLayoutTutorial/master/champion.png";
-const logoSource = "https://nflcdns.nfl.com/static/site/img/logos/png-500x500/teams/JAX.png";
+const logoSource = "https://raw.githubusercontent.com/shanerudolfworktive/ScalableLayoutTutorial/master/rank.png";
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 let {width} = Dimensions.get('window');
@@ -12,20 +12,20 @@ let {width} = Dimensions.get('window');
 EStyleSheet.build({$rem: width / 40});
 const rankData = [
     {
-        info: "jena"
+        info: "1st Janna wining 5000 games"
     },
     {
-        info: "jena"
+        info: "2nd Lucien wining 2018"
     },
     {
-        info: "jena",
+        info: "3rd Draven wining lck",
         selected: true
     },
     {
-        info: "jena"
+        info: "4th WuKong wining 3000 games"
     },
     {
-        info: "jena"
+        info: "5th Diana wining 200 games"
     },
 ]
 export default class App extends React.Component {
@@ -70,8 +70,8 @@ export default class App extends React.Component {
         return (
             <View style={styles.scoreContainer}>
                 <Image source={{uri: logoSource}} style={styles.logoImage} resizeMode="cover" resizeMethod="scale"/>
-                <Text style={styles.championName}>Jenna</Text>
-                <Text style={styles.rankNumber}>#57</Text>
+                <Text style={styles.championName}>Draven</Text>
+                <Text style={styles.rankNumber}>#3</Text>
             </View>
         )
     }
