@@ -1,5 +1,5 @@
 import React from "react";
-import {StyleSheet, Text, View, ScrollView, Image} from "react-native";
+import {StyleSheet, Text, View, ScrollView, Image, Dimensions} from "react-native";
 import {CircleImage} from "./CircleImage";
 import normalize from "./normalizeText";
 
@@ -7,6 +7,11 @@ import normalize from "./normalizeText";
 const description = "this is description, very long text, jenna has been the number one support, and has been really great for fun to play as a champion, blah blah blah blab blah blah";
 const championSource= "https://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/BRA371156.png";
 const logoSource = "https://nflcdns.nfl.com/static/site/img/logos/png-500x500/teams/JAX.png";
+import EStyleSheet from 'react-native-extended-stylesheet';
+
+let {height, width} = Dimensions.get('window');
+
+EStyleSheet.build({$rem: width / 40});
 const rankData = [
     {
         info: "jena"
@@ -106,7 +111,7 @@ const shadow = {
     shadowOpacity: 0.3
 }
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
     container: {
         height: "100%",
         width: "100%",
@@ -139,24 +144,24 @@ const styles = StyleSheet.create({
         width: "100%",
         flex: 55,
         backgroundColor: "red",
-        paddingTop: 10,
-        paddingBottom: 10,
+        paddingTop: "1rem",
+        paddingBottom: "1rem"
     },
     descriptionText: {
         color: "white",
-        fontSize: normalize(12),
-        marginLeft: 10,
-        marginRight: 10,
+        fontSize: "1.2rem",
+        marginLeft: "1rem",
+        marginRight: "1rem"
     },
     rankRow: {
         flex: 1,
-        paddingLeft: 8,
+        paddingLeft: "0.8rem",
         justifyContent: "center",
         ...shadow
     },
     rankText: {
-        color: "blue",
-        fontSize: normalize(11)
+        fontSize: "1.2rem",
+        fontWeight: "bold",
     },
     backgroundColorBlue: {
         backgroundColor: "blue"
@@ -184,9 +189,9 @@ const styles = StyleSheet.create({
     },
     championName: {
         fontWeight: "bold",
-        fontSize: normalize(11)
+        fontSize: "1.1rem"
     },
     rankNumber: {
-        fontSize: normalize(10)
+        fontSize: "1rem"
     }
 });
