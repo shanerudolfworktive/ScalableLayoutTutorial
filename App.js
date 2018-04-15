@@ -15,11 +15,11 @@ const rankData = [
         info: "1st Janna wining 5000 games"
     },
     {
-        info: "2nd Lucien wining 2018"
+        info: "2nd Draven wining lck",
+        selected: true
     },
     {
-        info: "3rd Draven wining lck",
-        selected: true
+        info: "3rd Lucien wining 2018"
     },
     {
         info: "4th WuKong wining 3000 games"
@@ -62,7 +62,7 @@ export default class App extends React.Component {
 
     renderChampionImage = () => {
         return (
-            <CircleImage style={styles.championImage} imageSource={championSource} />
+            <CircleImage borderColor="#0d6f70" style={styles.championImage} imageSource={championSource} />
         )
     }
 
@@ -103,10 +103,10 @@ const shadow = {
     shadowColor: '#000000',
     shadowOffset: {
         width: 0,
-        height: 0.5
+        height: 0.35
     },
     shadowRadius: 1,
-    shadowOpacity: 0.3
+    shadowOpacity: 0.6
 }
 
 const styles = EStyleSheet.create({
@@ -133,6 +133,7 @@ const styles = EStyleSheet.create({
     },
     leftTopContainer: {
         width: "100%",
+        backgroundColor: "#f6f6f6",
         flexDirection: "row",
         flex: 85,
         alignItems: "center",
@@ -141,9 +142,9 @@ const styles = EStyleSheet.create({
     leftBottomContainer: {
         width: "100%",
         flex: 55,
-        backgroundColor: "red",
         paddingTop: "1rem",
-        paddingBottom: "1rem"
+        paddingBottom: "1rem",
+        backgroundColor: "#013360",
     },
     descriptionText: {
         color: "white",
@@ -162,13 +163,13 @@ const styles = EStyleSheet.create({
         fontWeight: "bold",
     },
     backgroundColorBlue: {
-        backgroundColor: "blue"
+        backgroundColor: "#013360"
     },
     backgroundColorWhite: {
         backgroundColor: "white"
     },
     textColorBlue: {
-        color: "blue"
+        color: "#013360"
     },
     textColorWhite: {
         color: "white"
@@ -179,17 +180,20 @@ const styles = EStyleSheet.create({
         justifyContent: "center"
     },
     championImage: {
-        height: "59%"
+        height: "59%",
+        borderWidth: "0.2rem"
     },
     logoImage: {
         height: "26%",
         aspectRatio: 25/22
     },
     championName: {
+        color: "#013360",
         fontWeight: "bold",
         fontSize: "1.1rem"
     },
     rankNumber: {
-        fontSize: "1rem"
+        fontSize: "1rem",
+        color: "#555550"
     }
 });
