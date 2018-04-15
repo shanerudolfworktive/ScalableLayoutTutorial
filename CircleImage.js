@@ -47,6 +47,7 @@ export class CircleImage extends React.PureComponent<
         const {imageSource} = this.props;
         return (
             <Image
+                resizeMode="contain"
                 source={{uri: imageSource}}
                 style={this.styles}
                 onLayout={this.setBorderRadius}

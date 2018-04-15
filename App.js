@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, ScrollView, Image, Dimensions} from "react-nativ
 import {CircleImage} from "./CircleImage";
 
 const description = "this is description, very long text, jenna has been the number one support, and has been really great for fun to play as a champion, blah blah blah blab blah blah";
-const championSource= "https://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/BRA371156.png";
+const championSource= "https://raw.githubusercontent.com/shanerudolfworktive/ScalableLayoutTutorial/master/champion.png";
 const logoSource = "https://nflcdns.nfl.com/static/site/img/logos/png-500x500/teams/JAX.png";
 import EStyleSheet from 'react-native-extended-stylesheet';
 
@@ -62,7 +62,7 @@ export default class App extends React.Component {
 
     renderChampionImage = () => {
         return (
-            <CircleImage style={styles.championImage} imageSource={championSource}/>
+            <CircleImage style={styles.championImage} imageSource={championSource} />
         )
     }
 
