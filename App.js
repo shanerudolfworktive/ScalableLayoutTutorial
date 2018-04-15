@@ -2,14 +2,14 @@ import React from "react";
 import {StyleSheet, Text, View, ScrollView, Image, Dimensions} from "react-native";
 import {CircleImage} from "./CircleImage";
 
-const description = "this is description, very long text, jenna has been the number one support, and has been really great for fun to play as a champion, blah blah blah blab blah blah";
+const description = "Draven gains his fans' Adoration when he catches a Spinning Axe or kills a minion, monster, or tower. Killing enemy champions grants Draven bonus gold based on how much Adoration he has.";
 const championSource= "https://raw.githubusercontent.com/shanerudolfworktive/ScalableLayoutTutorial/master/champion.png";
 const logoSource = "https://raw.githubusercontent.com/shanerudolfworktive/ScalableLayoutTutorial/master/rank.png";
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 let {width} = Dimensions.get('window');
 
-EStyleSheet.build({$rem: width / 40});
+EStyleSheet.build({$rem: width / 38});
 const rankData = [
     {
         info: "1st Janna wining 5000 games"
