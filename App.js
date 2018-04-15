@@ -1,15 +1,13 @@
 import React from "react";
 import {StyleSheet, Text, View, ScrollView, Image, Dimensions} from "react-native";
 import {CircleImage} from "./CircleImage";
-import normalize from "./normalizeText";
-
 
 const description = "this is description, very long text, jenna has been the number one support, and has been really great for fun to play as a champion, blah blah blah blab blah blah";
 const championSource= "https://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/BRA371156.png";
 const logoSource = "https://nflcdns.nfl.com/static/site/img/logos/png-500x500/teams/JAX.png";
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-let {height, width} = Dimensions.get('window');
+let {width} = Dimensions.get('window');
 
 EStyleSheet.build({$rem: width / 40});
 const rankData = [
