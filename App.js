@@ -114,7 +114,8 @@ const styles = EStyleSheet.create({
         height: "100%",
         width: "100%",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        padding: 8
     },
     contentContainer: {
         width: "100%",
