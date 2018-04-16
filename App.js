@@ -1,5 +1,5 @@
 import React from "react";
-import {StyleSheet, Text, View, ScrollView, Image, Dimensions} from "react-native";
+import {Text, View, ScrollView, Image, Dimensions} from "react-native";
 import champion from "./champion.png";
 import rank from "./rank.png";
 
@@ -61,7 +61,9 @@ export default class App extends React.Component {
 
     renderChampionImage = () => {
         return (
-            <Image resizeMode="contain" style={styles.championImage} source={champion} />
+            <View style={styles.championImageContainer}>
+                <Image style={styles.championImage} resizeMode="contain" source={champion} />
+            </View>
         )
     }
 
@@ -98,16 +100,6 @@ export default class App extends React.Component {
     }
 }
 
-const shadow = {
-    shadowColor: '#000000',
-    shadowOffset: {
-        width: 0,
-        height: 0.35
-    },
-    shadowRadius: 1,
-    shadowOpacity: 0.6
-}
-
 const styles = EStyleSheet.create({
     container: {
         height: "100%",
@@ -120,7 +112,8 @@ const styles = EStyleSheet.create({
         width: "100%",
         aspectRatio: 2,
         flexDirection: "row",
-        ...shadow,
+        borderWidth: 1,
+        borderColor: '#d6d7da',
         backgroundColor: "white",
     },
     rightContainer: {
@@ -156,7 +149,8 @@ const styles = EStyleSheet.create({
         flex: 1,
         paddingLeft: "8rem",
         justifyContent: "center",
-        ...shadow
+        borderWidth: 0.5,
+        borderColor: '#d6d7da',
     },
     rankText: {
         fontSize: "12rem",
@@ -179,12 +173,16 @@ const styles = EStyleSheet.create({
         marginLeft: "7%",
         justifyContent: "center"
     },
-    championImage: {
+    championImageContainer: {
         height: "60rem",
         width: "60rem",
         borderColor: "#0d6f70",
         borderRadius: "30rem",
-        borderWidth: "2rem"
+        borderWidth: "2rem",
+    },
+    championImage: {
+        width: "100%",
+        height: "100%"
     },
     logoImage: {
         height: "26%",
