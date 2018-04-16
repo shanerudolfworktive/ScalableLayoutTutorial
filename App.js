@@ -125,11 +125,11 @@ const styles = EStyleSheet.create({
         backgroundColor: "white",
     },
     rightContainer: {
-        flex: 4,
+        flex: 17,
         height: "100%",
     },
     leftContainer: {
-        flex: 3,
+        flex: 11,
         height: "100%",
     },
     leftTopContainer: {
