@@ -1,15 +1,14 @@
 import React from "react";
 import {StyleSheet, Text, View, ScrollView, Image, Dimensions} from "react-native";
-import {CircleImage} from "./CircleImage";
+import champion from "./champion.png";
+import rank from "./rank.png";
 
 const description = "Draven gains his fans' Adoration when he catches a Spinning Axe or kills a minion, monster, or tower. Killing enemy champions grants Draven bonus gold based on how much Adoration he has.";
-const championSource= "https://raw.githubusercontent.com/shanerudolfworktive/ScalableLayoutTutorial/master/champion.png";
-const logoSource = "https://raw.githubusercontent.com/shanerudolfworktive/ScalableLayoutTutorial/master/rank.png";
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-let {width} = Dimensions.get('window');
+let entireScreenWidth = Dimensions.get('window').width;
 
-EStyleSheet.build({$rem: width / 38});
+EStyleSheet.build({$rem: entireScreenWidth / 380});
 const rankData = [
     {
         info: "1st Janna wining 5000 games"
@@ -62,14 +61,14 @@ export default class App extends React.Component {
 
     renderChampionImage = () => {
         return (
-            <CircleImage borderColor="#0d6f70" style={styles.championImage} imageSource={championSource} />
+            <Image resizeMode="contain" style={styles.championImage} source={champion} />
         )
     }
 
     renderScore = () => {
         return (
             <View style={styles.scoreContainer}>
-                <Image source={{uri: logoSource}} style={styles.logoImage} resizeMode="cover" resizeMethod="scale"/>
+                <Image source={rank} style={styles.logoImage} resizeMode="cover" resizeMethod="scale"/>
                 <Text style={styles.championName}>Draven</Text>
                 <Text style={styles.rankNumber}>#3</Text>
             </View>
@@ -143,24 +142,24 @@ const styles = EStyleSheet.create({
     leftBottomContainer: {
         width: "100%",
         flex: 55,
-        paddingTop: "1rem",
-        paddingBottom: "1rem",
+        paddingTop: "10rem",
+        paddingBottom: "10rem",
         backgroundColor: "#013360",
     },
     descriptionText: {
         color: "white",
-        fontSize: "1.2rem",
-        marginLeft: "1rem",
-        marginRight: "1rem"
+        fontSize: "12rem",
+        marginLeft: "10rem",
+        marginRight: "10rem"
     },
     rankRow: {
         flex: 1,
-        paddingLeft: "0.8rem",
+        paddingLeft: "8rem",
         justifyContent: "center",
         ...shadow
     },
     rankText: {
-        fontSize: "1.2rem",
+        fontSize: "12rem",
         fontWeight: "bold",
     },
     backgroundColorBlue: {
@@ -181,8 +180,11 @@ const styles = EStyleSheet.create({
         justifyContent: "center"
     },
     championImage: {
-        height: "59%",
-        borderWidth: "0.2rem"
+        height: "60rem",
+        width: "60rem",
+        borderColor: "#0d6f70",
+        borderRadius: "30rem",
+        borderWidth: "2rem"
     },
     logoImage: {
         height: "26%",
@@ -191,10 +193,10 @@ const styles = EStyleSheet.create({
     championName: {
         color: "#013360",
         fontWeight: "bold",
-        fontSize: "1.1rem"
+        fontSize: "11rem"
     },
     rankNumber: {
-        fontSize: "1rem",
+        fontSize: "10rem",
         color: "#555550"
     }
 });
