@@ -119,8 +119,8 @@ const styles = EStyleSheet.create({
     },
     contentContainer: {
         width: "100%",
-        flexDirection: "row",
         aspectRatio: 2,
+        flexDirection: "row",
         ...shadow,
         backgroundColor: "white",
     },
